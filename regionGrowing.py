@@ -1,12 +1,14 @@
 # author = ZRHonor
 # 超像素分割 局部生长算法
-# 输入依次为：灰度图像，生长起始点，检测阈值
 import numpy as np
 
 def regionGrowing(grayImg,seed,threshold):
-    """ 超像素分割 局部生长算法
-        输入依次为：灰度图像，生长起始点，检测阈值
-        输出为{0,255}的二值图像"""
+    """
+    :param grayImg: 灰度图像
+    :param seed: 生长起始点的位置
+    :param threshold: 阈值
+    :return: 取值为{0, 255}的二值图像
+    """
     [maxX, maxY] = grayImg.shape[0:2]
 
     # 用于保存生长点的队列
